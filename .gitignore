@@ -1,0 +1,40 @@
+# corr-bench: deny-everything-then-allowlist gitignore.
+# Only the 7 plot scripts + their 7 output figures + repo metadata are tracked.
+
+# 1. Ignore everything by default.
+/*
+*
+
+# 2. Allow repo metadata.
+!.gitignore
+!README.md
+!LICENSE
+!requirements.txt
+
+# 3. Allow src/ but only the 7 plot scripts inside it.
+!src/
+src/*
+!src/fig1_reproduce_5b_bottom.py
+!src/plot_fig2_module_stacked.py
+!src/plot_3bar_precision.py
+!src/plot_fig3_combined.py
+!src/18_plot_cobra_r2.py
+!src/plot_figs1_figs2.py
+!src/plot_fig3_summary_combined.py
+
+# 4. Allow figures/ but only the 7 final PNGs.
+!figures/
+figures/*
+!figures/fig1_ges_gtex.png
+!figures/fig2_module_stacked.png
+!figures/fig3_combined.png
+!figures/fig4_cobra_train_test_r2.png
+!figures/figs1_ora_cp.png
+!figures/figs2_gsea_cp.png
+!figures/figs3_summary_gobp_combined.png
+
+# 5. Always-ignore noise.
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
