@@ -4,7 +4,16 @@ Plotting code for the figures of *"Quality, not quantity, of enriched pathways
 should guide benchmarks of batch correction methods in biological networks"*
 (Babaie, Quackenbush, Ben Guebila).
 
-This repository contains the final plotting scripts and their output
+This repository introduces 2 new COBRA modes (available in [netzoopy 0.12](https://github.com/netZoo/netZooPy)):
+- Nonnegative Least squares (NNLS)
+- Nonnegative Lasso (NNLasso)
+
+In addition to the default MLE mode. These 2 modes come as an improvement to the MLE mode which tends to produce between 0-5% of |values|>1
+in the predicted co-expression matrices (Table S1 of [the COBRA publication](https://academic.oup.com/bioinformatics/article/40/9/btae531/7748404?login=true&guestAccessKey=)).
+By constraining estimated matrices to be positive-semi definite, NNLS and NNLasso produce correctly scaled correlation coefficients.
+The differences are small in practice as reflected in [figure 4](https://github.com/QuackenbushLab/corr-bench/blob/main/figures/fig4_cobra_train_test_r2.png), reflecting that correlation violation are rare.
+
+Specifically, this repository contains the final plotting scripts and their output
 figures. Analysis results (per-tissue WGCNA modules, ORA/GSEA tables, COBRA
 train/test R², runtime benchmarks, GMT files) are released on Zenodo
 ([10.5281/zenodo.20187237](https://doi.org/10.5281/zenodo.20187237)) and
