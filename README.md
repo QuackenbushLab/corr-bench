@@ -11,9 +11,9 @@ This repository introduces 2 new COBRA modes (available in [netzoopy 0.12](https
 In addition to the default MLE mode. These 2 modes come as an improvement to the MLE mode which tends to produce between 0-5% of |values|>1
 in the predicted co-expression matrices (Table S1 of [the COBRA publication](https://academic.oup.com/bioinformatics/article/40/9/btae531/7748404?login=true&guestAccessKey=)).
 By constraining estimated matrices to be positive-semi definite, NNLS and NNLasso produce correctly scaled correlation coefficients.
-The differences are small in practice as reflected in [figure 4](https://github.com/QuackenbushLab/corr-bench/blob/main/figures/fig4_cobra_train_test_r2.png), reflecting that correlation violation are rare.
+The differences are small in practice as reflected in [figure 4](https://github.com/QuackenbushLab/corr-bench/blob/main/figures/fig4_cobra_train_test_r2.png), reflecting that correlation violations are rare.
 
-Specifically, this repository contains the final plotting scripts and their output
+Specifically, this repository contains the final plotting scripts for the benchmarks and their output
 figures. Analysis results (per-tissue WGCNA modules, ORA/GSEA tables, COBRA
 train/test R², runtime benchmarks, GMT files) are released on Zenodo
 ([10.5281/zenodo.20187237](https://doi.org/10.5281/zenodo.20187237)) and
@@ -24,12 +24,12 @@ paths below.
 
 All COBRA and CorrAdjust results in `results/tpmfilter_data/`,
 `results/wgcna_ora_cov_all/`, and `results/wgcna_ora_hardy/` use the same
-gene set per tissue: genes with median raw count ≥ 1 across the training
-samples.
+gene set per tissue: genes with median TPM ≥ 1 across the training
+samples. Benchmarks with median raw count ≥ 1 were used to obtain a larger gene set than TPM ≥ 1 for runtime comparison.  
 
 ## Data (Zenodo)
 
-The deposit contains 5 tarballs and 2 small TSVs. After download, extract
+The deposit contains 5 tarballs and 2 TSVs. After download, extract
 each tarball at the indicated location:
 
 | Archive | Extract at | Used by |
