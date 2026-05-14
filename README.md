@@ -1,10 +1,10 @@
 # corr-bench
 
-Plotting code for the figures of *"Quality not quantity of enriched pathways
+Plotting code for the figures of *"Quality, not quantity, of enriched pathways
 should guide benchmarks of batch correction methods in biological networks"*
-(Babaie, Saha, Quackenbush, Ben Guebila).
+(Babaie, Quackenbush, Ben Guebila).
 
-This repository contains only the final plotting scripts and their output
+This repository contains the final plotting scripts and their output
 figures. Analysis results (per-tissue WGCNA modules, ORA/GSEA tables, COBRA
 train/test R², runtime benchmarks, GMT files) are released on Zenodo
 (DOI: TBD) and should be placed under `results/` and `data/` matching the
@@ -13,12 +13,9 @@ paths below.
 ### Gene filtering note
 
 All COBRA and CorrAdjust results in `results/tpmfilter_data/`,
-`results/wgcna_ora_cov_all/`, and `results/wgcna_ora_hardy/` use the **same
-gene set per tissue**: genes with median raw count ≥ 1 across the training
-samples (the legacy folder name `tpmfilter_data` predates the switch from a
-TPM-based filter; despite the name, it is a count-based filter). Comparisons
-in Figs 2 and S3 are therefore apples-to-apples on genes; observed
-differences reflect the methods.
+`results/wgcna_ora_cov_all/`, and `results/wgcna_ora_hardy/` use the same
+gene set per tissue: genes with median raw count ≥ 1 across the training
+samples.
 
 ## Data (Zenodo)
 
