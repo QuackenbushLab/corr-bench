@@ -7,7 +7,8 @@ should guide benchmarks of batch correction methods in biological networks"*
 This repository contains the final plotting scripts and their output
 figures. Analysis results (per-tissue WGCNA modules, ORA/GSEA tables, COBRA
 train/test R², runtime benchmarks, GMT files) are released on Zenodo
-(DOI: TBD) and should be placed under `results/` and `data/` matching the
+([10.5281/zenodo.20187237](https://doi.org/10.5281/zenodo.20187237)) and
+should be placed under `results/` and `data/` matching the
 paths below.
 
 ### Gene filtering note
